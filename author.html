@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка Автора</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden-form input:invalid {
+            border: 2px solid var(--error-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Сторінка Автора</h1>
+            <nav>
+                <a href="pharmacy.html">Аптека</a>
+                <a href="news.html">Новини Аптеки</a>
+                <a href="author.html" class="active">Про автора</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="profile-header">
+                <img src="img/image.png" alt="Фото автора" class="profile-pic" dir="ltr">
+
+                <div class="details">
+                    <h2 id="about" title="Про автора" lang="uk">Сандюк Даниїл</h2>
+                    <p dir="ltr" class="bio">
+                        Студент групи КН-241Б, варіант 17. Цей сайт розроблено в рамках лабораторної роботи дисципліни "Вебпрограмування" і демонструє використання тегів HTML та Стилів (CSS).
+                        <small title="примітка">*Всі дані вигадані для навчальних цілей*</small>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </section>
+
+            <section>
+                <h2>Інформація про лабораторну роботу</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Дисципліна</th>
+                            <th>Вид роботи</th>
+                            <th>Варіант</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td lang="uk">Основи Веб-технологій</td>
+                            <td>Лабораторна робота №1</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td lang="uk">Статус</td>
+                            <td>Виконано</td>
+                            <td>Так</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="hidden-form" style="padding-top: 20px;">
+                <label for="variant">Варіант (1-20):</label>
+                <input type="number" id="variant" min="1" max="20" required value="25">
+            </div>
+        </main>
+
+        <footer>
+            <p dir="ltr">Контактний телефон: +380 68 357 7026</p>
+            <p>Email: sandiukdanyil@chnu.edu.ua</p>
+            <address lang="uk">
+                <a href="mailto:sandiukdanyil@chnu.edu.ua">Написати розробнику</a>
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>
