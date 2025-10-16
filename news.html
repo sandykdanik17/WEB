@@ -3,66 +3,72 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Іваненко Іван, варіант 17">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новини аптеки «Здоров’я+»</title>
-
-    <style lang="uk" media="all" type="text/css">
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        
-        .aside-box {
-            background: #f7f7f7;
-            padding: 10px;
-            border-radius: 8px;
-        }
-        
-        .news-article {
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header style="border-bottom:1px solid #ccc;" id="news-header">
-        <h1>Новини аптеки «Здоров’я+»</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Новини аптеки «Здоров’я+»</h1>
+            <nav>
+                <nav>
+                    <a href="author.html">Про автора</a>
+                    <a href="news.html">Новини</a>
+                    <a href="pharmacy.html">Про фірму</a>
+                    <a href="lists.html">Асортимент</a>
+                    <a href="menu.html">Головне меню</a>
+                </nav>
+            </nav>
+        </header>
 
-    <article style="padding:8px;" title="акція" class="news-article">
-        <p><mark style="background:#fffd93;" lang="uk">Акція: -20% на вітаміни</mark></p>
+        <main>
+            <article title="акція" class="news-item">
+                <img alt="Акція на вітаміни" class="news-photo" src="img/4096737754_w640_h640_4096737754.webp">
 
-        <img alt="Акція" vspace="8" height="180" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Pharmacy_interior.jpg/640px-Pharmacy_interior.jpg" usemap="#promo-map">
-        <map name="promo-map" accesskey="p" target="_blank" coords="0,0,100,100" lang="uk" style="display:none;">
-      <area accesskey="a" coords="0,0,100,100" class="promo" href="#detail" style="outline:none;" tabindex="0">
-    </map>
+                <div class="news-content">
+                    <h2>Акція: -20% на вітаміни</h2>
+                    <p lang="uk">
+                        Чудова новина для наших клієнтів! Ми оголошуємо сезонну знижку -20% на весь асортимент вітамінів та дієтичних добавок. Подбайте про своє здоров'я до зимового періоду.
+                    </p>
+                </div>
 
-        <p>
-            <ins id="ref1" style="text-decoration:underline;" cite="https://zdorovia.example">Деталі акції — на сайті</ins>
-        </p>
+                <div class="news-meta">
+                    <div class="meta-item">
+                        <strong>Ціна</strong>
+                        <span>35 грн<sub title="з ПДВ"> (з ПДВ)</sub></span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Термін дії до:</strong>
+                        <span lang="uk" id="term">31.10.2025</span>
+                    </div>
+                    <a href="pharmacy.html#vitamins">Переглянути асортимент</a>
+                </div>
+            </article>
 
-        <p>Ціна 35 грн<sub style="font-size:0.9em;" class="note" title="з ПДВ">     (з ПДВ)</sub></p>
-        <p>Термін дії до:<sup lang="uk" style="font-size:0.8em;" id="term">   31.10.2025</sup></p>
+            <article title="оновлення" class="news-item">
+                <img alt="Новий дизайн" class="news-photo" src="img/NEW-2.gif">
 
-        <bdo lang="uk">Ми дбаємо про ваше здоров’я!</bdo><br>
-        <span id="contact" class="contact">Тел: +380 68 357 7026</span>
+                <div class="news-content">
+                    <h2>Оновлення дизайну сайту</h2>
+                    <p lang="uk">
+                        Ми оновили дизайн нашого веб-сайту, щоб зробити його більш зручним та сучасним для вас. Оцініть новий інтерфейс та поділіться своїми відгуками!
+                    </p>
+                </div>
 
-        <div id="article-wrapper">
-            <article style="padding:5px;" title="новини">Нові поставки препаратів та вітамінів.</article>
-        </div>
+                <div class="news-meta">
+                    <a href="author.html">Детальніше про розробника</a>
+                </div>
+            </article>
+        </main>
 
-        <aside style="background:#eef;" class="aside-box">
-            Графік роботи: 08:00 – 20:00
-        </aside>
-
-        <p>
-            <ruby style="font-size:0.9em;" class="ruby-word">
-        аптека<rt class="ruby-note" title="вимова">ап-тé-ка</rt>
-      </ruby>
-        </p>
-    </article>
-
-    <footer>
-        <small>© 2025 Аптека «Здоров’я+»</small>
-    </footer>
+        <footer>
+            <p>© 2025 Аптека «Здоров’я+»</p>
+            <p>Розробник: Сандюк Даниїл</p>
+        </footer>
+    </div>
 </body>
+
+</html>

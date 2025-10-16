@@ -1,0 +1,618 @@
+/* :root - псевдоклас для визначення глобальних CSS-змінних */
+
+:root {
+    --primary-color: #038c73;
+    --primary-hover: #025959;
+    --dark-text: #2c3e50;
+    --light-background: #f4f4f4;
+    --card-background: #ffffff;
+    --border-color: #ddd;
+    --hover-color: #f8f9fa;
+    --dashed-border-color: #038c73;
+    --error-color: #c90000;
+    --secondary-color: #ff9900;
+    --accent-coral: #e76f51;
+    --accent-blue: #2a9d8f;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    unicode-bidi: normal;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-attachment: scroll;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="%23f0f0f0"/><path d="M0 40 L40 0 H0 Z" fill="%23e0e0e0"/></svg>');
+    background-size: 40px 40px;
+    background-color: var(--light-background);
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark-text);
+    display: block;
+    direction: ltr;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--card-background);
+    border-top: 5px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+header {
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+header h1,
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header h1 {
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav,
+footer {
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a.active {
+    color: var(--primary-hover);
+    border-bottom: 2px solid var(--primary-hover);
+}
+
+nav a,
+a:link {
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+    vertical-align: text-top;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+a:visited {
+    color: var(--primary-hover);
+}
+
+a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+nav a::after {
+    content: '';
+}
+
+h2 {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    color: var(--primary-hover);
+}
+
+footer {
+    border-top: 3px outset var(--border-color);
+    margin-top: 30px;
+    padding-top: 20px;
+    color: #666;
+}
+
+footer p+p {
+    margin-top: 5px;
+}
+
+footer a:last-child:hover {
+    color: var(--error-color);
+}
+
+:lang(uk) {
+    padding-left: 0.5px;
+}
+
+::selection {
+    color: var(--card-background) !important;
+    background: var(--primary-color) !important;
+}
+
+[dir|="ltr"] {
+    unicode-bidi: embed;
+}
+
+small[title] {
+    font-size: 0.8em;
+    color: #666;
+    display: block;
+    margin-top: 10px;
+}
+
+[title$="варіант 17"] {
+    font-style: italic;
+}
+
+sup {
+    vertical-align: super;
+}
+
+address {
+    overflow: visible;
+    margin-top: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#about {
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.bio {
+    max-width: 600px;
+    border-bottom: thin dashed var(--dashed-border-color);
+    padding-bottom: 10px;
+}
+
+.profile-pic {
+    float: left;
+    width: 150px;
+    height: 150px;
+    min-height: 150px;
+    max-height: none;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    border-left-style: solid;
+    object-fit: cover;
+    vertical-align: text-top;
+}
+
+.clear {
+    clear: both;
+}
+
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+th,
+td {
+    display: table-cell;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: baseline;
+}
+
+tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+tbody tr:last-child td {
+    border-bottom: 3px double var(--primary-color);
+}
+
+input:invalid {
+    border-right-color: var(--error-color);
+    border-left-style: outset;
+    border-color: var(--error-color);
+}
+
+input:in-range {
+    border-bottom-width: thick;
+    border-color: green;
+}
+
+.slogan-banner {
+    padding: 20px;
+    margin: 20px 0 40px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.slogan-banner p {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: var(--dark-text);
+}
+
+.slogan-banner+h2 {
+    text-align: center;
+    border-bottom: none;
+}
+
+.slogan-banner+h2::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 8px auto 30px;
+    border-radius: 2px;
+}
+
+.goods-wrapper {
+    display: table-row-group;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.goods-list-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+
+.goods-list-item:hover {
+    background-color: var(--hover-color);
+}
+
+.drug-photo-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e9ecef;
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    flex-shrink: 0;
+    border-style: outset;
+}
+
+.drug-details {
+    flex-grow: 1;
+    padding-left: 1%;
+}
+
+.drug-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em;
+    color: var(--primary-hover);
+}
+
+.drug-details h3 var {
+    font-style: normal;
+    font-weight: 400;
+    color: #666;
+    font-size: 0.8em;
+}
+
+pre.goods {
+    font-family: inherit;
+    font-size: 0.9em;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: none;
+    white-space: pre-wrap;
+}
+
+p.drug-code {
+    border-bottom-style: dashed;
+    border-bottom-width: thin;
+    padding-top: 8px;
+    margin: 0;
+    color: #777;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.drug-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.goods-wrapper .goods-list-item:first-child {
+    border-top: thick solid var(--primary-color);
+}
+
+.goods-wrapper .goods-list-item:first-child .drug-photo-placeholder {
+    border-left-style: none;
+}
+
+.goods-list-item:nth-child(2n) .drug-price {
+    border-right-width: thin;
+    border-right-style: solid;
+    border-right-color: var(--secondary-color);
+    padding-right: 15px;
+}
+
+.drug-details code,
+.drug-details abbr {
+    display: inline-table;
+}
+
+.news-item {
+    position: relative;
+    z-index: auto;
+    border-left: 3px dashed var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    overflow: visible;
+    direction: ltr;
+    display: grid;
+    grid-template-columns: 150px 1fr auto;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-photo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    min-height: 150px;
+    max-height: none;
+    border-radius: 8px;
+    object-fit: cover;
+    border-style: outset;
+    border-color: var(--border-color);
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-item h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.8em;
+    color: var(--dark-text);
+}
+
+.news-item p {
+    margin: 0;
+}
+
+.news-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 20px;
+    border-left: 1px solid var(--border-color);
+    height: 100%;
+}
+
+.news-meta a {
+    white-space: nowrap;
+}
+
+.meta-item {
+    background-color: var(--light-background);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.meta-item strong {
+    display: block;
+    font-size: 0.9em;
+    color: var(--primary-hover);
+}
+
+.meta-item span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.news-item p::first-line {
+    font-weight: bold;
+    color: var(--primary-hover);
+}
+
+address a {
+    text-decoration: none;
+    border-style: none;
+    border-color: transparent;
+}
+
+.drug-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+nav.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav.main-menu li {
+    margin: 15px 0;
+}
+
+nav.main-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.main-menu li:nth-child(3n+1) a {
+    background-color: var(--primary-color);
+}
+
+nav.main-menu li:nth-child(3n+2) a {
+    background-color: var(--accent-coral);
+}
+
+nav.main-menu li:nth-child(3n+3) a {
+    background-color: var(--accent-blue);
+}
+
+nav.main-menu a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+marquee {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lists-container {
+    display: flex;
+    gap: 30px;
+}
+
+.list-section {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.list-section h2 {
+    border-bottom: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.list-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 8px auto 0;
+}
+
+
+/*Зміни для Лабараторної 3*/
+
+ol.custom-counter {
+    counter-reset: custom-counter;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.custom-counter li {
+    counter-increment: custom-counter;
+    margin-bottom: 15px;
+    padding-left: 45px;
+    position: relative;
+    font-size: 1.1em;
+}
+
+ol.custom-counter li::before {
+    content: counter(custom-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+ul.image-marker {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23038c73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    list-style-position: inside;
+}
+
+ul.image-marker li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+ul.image-marker li:last-child {
+    border-bottom: none;
+}
+
+.definition-list dt {
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-top: 15px;
+}
+
+.definition-list dt::before {
+    content: '❓';
+    margin-right: 8px;
+}
+
+.definition-list dd {
+    margin: 5px 0 0 25px;
+    border-left: 3px solid var(--accent-blue);
+    background-color: var(--hover-color);
+    padding: 10px 10px 10px 15px;
+    border-radius: 0 8px 8px 0;
+}
