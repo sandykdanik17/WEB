@@ -616,3 +616,110 @@ ul.image-marker li:last-child {
     padding: 10px 10px 10px 15px;
     border-radius: 0 8px 8px 0;
 }
+
+
+/* === Lab 4: Table Styles === */
+
+.lab4-table {
+    /* ВИМОГА: display: table - елемент є блоковою таблицею */
+    display: table;
+    /* ВИМОГА: border-collapse - об'єднуємо рамки комірок */
+    border-collapse: collapse;
+    /* ВИМОГА: border-spacing - відстань між рамками (працює з border-collapse: separate) */
+    border-spacing: 2px;
+    /* ВИМОГА: table-layout - алгоритм розрахунку ширини комірок */
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+
+/* ВИМОГА: caption-side - розміщення заголовка таблиці */
+
+.lab4-table caption {
+    display: table-caption;
+    /* ВИМОГА */
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+
+/* Стилізація груп колонок */
+
+.lab4-table .col-name {
+    background-color: var(--hover-color);
+    width: 25%;
+}
+
+.lab4-table .col-price {
+    background-color: #f0fff0;
+}
+
+
+/* ВИМОГА: display для всіх елементів таблиці */
+
+.lab4-table thead {
+    display: table-header-group;
+}
+
+.lab4-table tbody {
+    display: table-row-group;
+}
+
+.lab4-table tfoot {
+    display: table-footer-group;
+}
+
+.lab4-table colgroup {
+    display: table-column-group;
+}
+
+.lab4-table col {
+    display: table-column;
+}
+
+.lab4-table tr {
+    display: table-row;
+}
+
+.lab4-table th,
+.lab4-table td {
+    display: table-cell;
+}
+
+.lab4-table th,
+.lab4-table td {
+    /* ВИМОГА: border-* - задаємо стиль рамки */
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.lab4-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    /* ВИМОГА: speak-header (застаріла, для екранних дикторів) */
+    speak-header: always;
+}
+
+.lab4-table tbody tr:nth-child(even) {
+    background-color: var(--hover-color);
+}
+
+.lab4-table tbody tr:hover {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+
+/* ВИМОГА: empty-cells - показуємо порожні комірки */
+
+.lab4-table {
+    empty-cells: show;
+}
