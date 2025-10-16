@@ -1,3 +1,5 @@
+/* :root - псевдоклас для визначення глобальних CSS-змінних */
+
 :root {
     --primary-color: #038c73;
     --primary-hover: #025959;
@@ -9,6 +11,8 @@
     --dashed-border-color: #038c73;
     --error-color: #c90000;
     --secondary-color: #ff9900;
+    --accent-coral: #e76f51;
+    --accent-blue: #2a9d8f;
 }
 
 *,
@@ -28,6 +32,13 @@ html {
     background-color: var(--light-background);
 }
 
+body {
+    line-height: 1.6;
+    color: var(--dark-text);
+    display: block;
+    direction: ltr;
+}
+
 .container {
     max-width: 960px;
     margin: 30px auto;
@@ -40,29 +51,27 @@ html {
     background-position: top;
 }
 
-body {
-    line-height: 1.6;
-    color: var(--dark-text);
-    display: block;
-    direction: ltr;
-}
-
 header {
     margin-bottom: 25px;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 20px;
 }
 
-header h1 {
+header h1,
+thead {
     background-color: var(--primary-color);
     color: white;
+}
+
+header h1 {
     padding: 15px;
     text-align: center;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-nav {
+nav,
+footer {
     text-align: center;
 }
 
@@ -76,19 +85,6 @@ nav a {
 nav a.active {
     color: var(--primary-hover);
     border-bottom: 2px solid var(--primary-hover);
-}
-
-h2 {
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 5px;
-    color: var(--primary-hover);
-}
-
-.table-wrapper {
-    display: table-column-group;
 }
 
 nav a,
@@ -108,20 +104,37 @@ a:visited {
     color: var(--primary-hover);
 }
 
+a:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
 nav a::after {
     content: '';
+}
+
+h2 {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    color: var(--primary-hover);
 }
 
 footer {
     border-top: 3px outset var(--border-color);
     margin-top: 30px;
     padding-top: 20px;
-    text-align: center;
     color: #666;
 }
 
 footer p+p {
     margin-top: 5px;
+}
+
+footer a:last-child:hover {
+    color: var(--error-color);
 }
 
 :lang(uk) {
@@ -157,15 +170,6 @@ address {
     margin-top: 10px;
 }
 
-a:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
-}
-
-footer a:last-child:hover {
-    color: var(--error-color);
-}
-
 .profile-header {
     display: flex;
     align-items: center;
@@ -180,9 +184,7 @@ footer a:last-child:hover {
 
 .bio {
     max-width: 600px;
-    border-bottom-width: thin;
-    border-bottom-style: dashed;
-    border-bottom-color: var(--dashed-border-color);
+    border-bottom: thin dashed var(--dashed-border-color);
     padding-bottom: 10px;
 }
 
@@ -208,12 +210,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
-
-thead {
-    display: table-header-group;
-    background-color: var(--primary-color);
-    color: white;
 }
 
 tbody {
@@ -280,7 +276,6 @@ input:in-range {
 }
 
 .goods-wrapper {
-    /* ВИМОГА: display: table-row-group */
     display: table-row-group;
     width: 100%;
     max-width: none;
@@ -312,13 +307,11 @@ input:in-range {
     justify-content: center;
     color: #6c757d;
     flex-shrink: 0;
-    /* ВИМОГА: border-style: outset */
     border-style: outset;
 }
 
 .drug-details {
     flex-grow: 1;
-    /* ВИМОГА: padding-left:<процент> */
     padding-left: 1%;
 }
 
@@ -345,9 +338,6 @@ pre.goods {
     white-space: pre-wrap;
 }
 
-
-/* ВИМОГА: border-bottom-width: thin; border-bottom-style: dashed; */
-
 p.drug-code {
     border-bottom-style: dashed;
     border-bottom-width: thin;
@@ -366,22 +356,13 @@ p.drug-code {
     white-space: nowrap;
 }
 
-
-/* ВИМОГА - Псевдоклас :first-child */
-
 .goods-wrapper .goods-list-item:first-child {
     border-top: thick solid var(--primary-color);
 }
 
-
-/* ВИМОГА - border-left-style: none */
-
 .goods-wrapper .goods-list-item:first-child .drug-photo-placeholder {
     border-left-style: none;
 }
-
-
-/* ВИМОГА - border-right-width: thin; border-right-style: solid; border-right-color */
 
 .goods-list-item:nth-child(2n) .drug-price {
     border-right-width: thin;
@@ -389,9 +370,6 @@ p.drug-code {
     border-right-color: var(--secondary-color);
     padding-right: 15px;
 }
-
-
-/* ВИМОГА - display: inline-table; */
 
 .drug-details code,
 .drug-details abbr {
@@ -401,9 +379,7 @@ p.drug-code {
 .news-item {
     position: relative;
     z-index: auto;
-    border-left-style: dashed;
-    border-left-width: 3px;
-    border-left-color: var(--secondary-color);
+    border-left: 3px dashed var(--secondary-color);
     padding: 20px;
     margin-bottom: 30px;
     overflow: visible;
@@ -493,4 +469,150 @@ address a {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+}
+
+nav.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav.main-menu li {
+    margin: 15px 0;
+}
+
+nav.main-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.main-menu li:nth-child(3n+1) a {
+    background-color: var(--primary-color);
+}
+
+nav.main-menu li:nth-child(3n+2) a {
+    background-color: var(--accent-coral);
+}
+
+nav.main-menu li:nth-child(3n+3) a {
+    background-color: var(--accent-blue);
+}
+
+nav.main-menu a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+marquee {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lists-container {
+    display: flex;
+    gap: 30px;
+}
+
+.list-section {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+.list-section h2 {
+    border-bottom: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.list-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 8px auto 0;
+}
+
+
+/*Зміни для Лабараторної 3*/
+
+ol.custom-counter {
+    counter-reset: custom-counter;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.custom-counter li {
+    counter-increment: custom-counter;
+    margin-bottom: 15px;
+    padding-left: 45px;
+    position: relative;
+    font-size: 1.1em;
+}
+
+ol.custom-counter li::before {
+    content: counter(custom-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+ul.image-marker {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23038c73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    list-style-position: inside;
+}
+
+ul.image-marker li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+ul.image-marker li:last-child {
+    border-bottom: none;
+}
+
+.definition-list dt {
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-top: 15px;
+}
+
+.definition-list dt::before {
+    content: '❓';
+    margin-right: 8px;
+}
+
+.definition-list dd {
+    margin: 5px 0 0 25px;
+    border-left: 3px solid var(--accent-blue);
+    background-color: var(--hover-color);
+    padding: 10px 10px 10px 15px;
+    border-radius: 0 8px 8px 0;
 }
