@@ -3,91 +3,86 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Іваненко Іван, варіант 17">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аптека «Здоров’я+»</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Аптека «Здоров’я+»</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Аптека «Здоров’я+»</h1>
+            <nav>
+                <a href="author.html">Про автора</a>
+                <a href="news.html">Новини Аптеки</a>
+                <a href="pharmacy.html" class="active">Аптека</a>
+            </nav>
+        </header>
 
-    <section>
-        <blockquote title="Наш девіз" id="mission" class="pharmacy-quote">
-            Наша аптека — це якісні ліки та турбота про ваше здоров’я.
-        </blockquote>
+        <main>
+            <section>
+                <div class="slogan-banner" title="Наш девіз" id="mission">
+                    <p>Наша аптека — це якісні ліки та турбота про ваше здоров’я.</p>
+                </div>
 
-        <pre lang="uk" class="goods">
-Вид: Таблетки
-Марка: Парацетамол
-Виробник: Дарниця
-Термін придатності: 12.2026
-Постачальник: ТОВ «Мед-Сервіс»
-Ціна: 45 грн
-        </pre>
+                <h2>Наші препарати</h2>
 
-        <p style="margin-bottom: 25px;">
-            Код препарату: <code title="код препарату" id="p001">PAR001</code><br>
-            <var dir="ltr" style="font-weight:bold;">доза 500 мг</var><br>
-            <abbr title="Парацетамол" id="abbr1">PAR</abbr> —
-            <abbr lang="uk" class="brand">Здоров’я+</abbr>
-        </p>
+                <div class="goods-wrapper">
+                    <div class="goods-list-item">
+                        <div class="drug-photo-placeholder">
+                            <img src="img/500_10_5_2.jpg" alt="Фото парацетамолу">
+                        </div>
+                        <div class="drug-details">
+                            <h3>Парацетамол <var dir="ltr">(500 мг)</var></h3>
+                            <pre lang="uk" class="goods">Виробник: Дарниця | Термін придатності: 12.2026</pre>
+                            <p class="drug-code">Код: <code title="код препарату" id="p001">PAR001</code> <abbr title="Парацетамол">PAR</abbr></p>
+                        </div>
+                        <div class="drug-price"><span>45 грн</span></div>
+                    </div>
+                    <div class="goods-list-item">
+                        <div class="drug-photo-placeholder">
+                            <img src="img/4e9089fb-23a8-41e7-b664-4336aee42d10-large.webp" alt="Фото парацетамолу">
+                        </div>
+                        <div class="drug-details">
+                            <h3>Ібупрофен <var dir="ltr">(400 мг)</var></h3>
+                            <pre lang="uk" class="goods">Виробник: Фармак | Термін придатності: 08.2025</pre>
+                            <p class="drug-code">Код: <code title="код препарату" id="p002">IBU001</code> <abbr title="Ібупрофен">IBU</abbr></p>
+                        </div>
+                        <div class="drug-price"><span>75 грн</span></div>
+                    </div>
+                    <div class="goods-list-item">
+                        <div class="drug-photo-placeholder">
+                            <img src="img/6223_1.jpg" alt="Фото парацетамолу">
+                        </div>
+                        <div class="drug-details">
+                            <h3>Лазолван <var dir="ltr">(100 мл)</var></h3>
+                            <pre lang="uk" class="goods">Виробник: Boehringer Ingelheim | Термін придатності: 10.2025</pre>
+                            <p class="drug-code">Код: <code title="код препарату" id="p003">LAZ001</code> <abbr title="Лазолван">LAZ</abbr></p>
+                        </div>
+                        <div class="drug-price"><span>155 грн</span></div>
+                    </div>
+                    <div class="goods-list-item">
+                        <div class="drug-photo-placeholder">
+                            <img src="img/48323_2.jpg" alt="Фото парацетамолу">
+                        </div>
+                        <div class="drug-details">
+                            <h3>Нокспрей <var dir="ltr">(10 мл)</var></h3>
+                            <pre lang="uk" class="goods">Виробник: Sperco | Термін придатності: 05.2026</pre>
+                            <p class="drug-code">Код: <code title="код препарату" id="p004">NOX001</code> <abbr title="Нокспрей">NOX</abbr></p>
+                        </div>
+                        <div class="drug-price"><span>95 грн</span></div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <pre lang="uk" class="goods">
-Вид: Таблетки
-Марка: Ібупрофен
-Виробник: Farmak
-Термін придатності: 08.2027
-Постачальник: ТОВ «БаДМ»
-Ціна: 62 грн
-        </pre>
-
-        <p style="margin-bottom: 25px;">
-            Код препарату: <code title="код препарату" id="p002">IBU001</code><br>
-            <var dir="ltr" style="font-weight:bold;">доза 400 мг</var><br>
-            <abbr title="Ібупрофен" id="abbr2">IBU</abbr> —
-            <abbr lang="uk" class="brand">Здоров’я+</abbr>
-        </p>
-
-        <pre lang="uk" class="goods">
-Вид: Сироп
-Марка: Лазолван
-Виробник: Boehringer Ingelheim
-Термін придатності: 10.2025
-Постачальник: ТОВ «Оптіма-Фарм»
-Ціна: 155 грн
-        </pre>
-
-        <p style="margin-bottom: 25px;">
-            Код препарату: <code title="код препарату" id="p003">LAZ001</code><br>
-            <var dir="ltr" style="font-weight:bold;">Об'єм 100 мл</var><br>
-            <abbr title="Лазолван" id="abbr3">LAZ</abbr> —
-            <abbr lang="uk" class="brand">Здоров’я+</abbr>
-        </p>
-
-        <pre lang="uk" class="goods">
-Вид: Спрей назальний
-Марка: Нокспрей
-Виробник: Sperco
-Термін придатності: 05.2026
-Постачальник: ТОВ «Мед-Сервіс»
-Ціна: 95 грн
-        </pre>
-
-        <p>
-            Код препарату: <code title="код препарату" id="p004">NOX001</code><br>
-            <var dir="ltr" style="font-weight:bold;">Об'єм 10 мл</var><br>
-            <abbr title="Нокспрей" id="abbr4">NOX</abbr> —
-            <abbr lang="uk" class="brand">Здоров’я+</abbr>
-        </p>
-
-        <img ismap class="photo" style="max-width:520px;border-radius:8px; margin-top: 40px;" title="Фото аптеки" lang="uk" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Pharmacy.jpg/640px-Pharmacy.jpg" alt="Аптека Здоров’я+">
-
-        <address dir="ltr" style="font-style:normal; margin-top:10px;">
-            м. Чернівці, вул. Героїв Майдану 113<br>
-            Телефон: +380 (68) 357-7026
-        </address>
-    </section>
+        <footer>
+            <p>Телефон: <a href="tel:+380683577026">+38 (044) 123-45-67</a></p>
+            <p>Email: <a href="mailto:apteka@zdorovia.ua">apteka@zdorovia.ua</a></p>
+            <p>© 2024 Аптека «Здоров’я+»</p>
+        </footer>
+    </div>
 </body>
 
 </html>
