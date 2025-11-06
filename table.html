@@ -12,45 +12,51 @@
 <body>
     <div class="container">
         <header>
-            <h1>Прайс-лист товарів</h1>
+            <h1>Актуальна наявність товарів</h1>
             <nav>
                 <a href="author.html">Про автора</a>
                 <a href="news.html">Новини</a>
                 <a href="pharmacy.html">Про фірму</a>
                 <a href="lists.html">Асортимент</a>
                 <a href="menu.html">Головне меню</a>
-                <a href="table.html" class="active">Прайс-лист</a>
+                <a href="table.html" class="active">Наявність товарів</a>
             </nav>
         </header>
 
         <main>
-            <table class="lab4-table">
-                <caption>Прайс-лист на лікарські засоби станом на 16.10.2025</caption>
-                <colgroup>
-                    <col class="col1">
-                    <col class="col2">
-                    <col class="col3">
-                    <col class="col4">
-                    <col class="col5">
-                    <col class="col6">
+            <table class="lab4-table" id="price_table" style="border-style: solid;" rules="all" cellspacing="0">
+
+                <caption id="table_caption" title="Прайс-лист на ліки">
+                    Актуальна наявність лікарських засобів станом на 16.10.2025
+                </caption>
+
+                <colgroup id="price_columns" title="Групи колонок прайсу">
+                    <col class="col1" style="width: 18%;">
+                    <col class="col2" style="width: 14%;">
+                    <col class="col3" style="width: 18%;">
+                    <col class="col4" style="width: 18%;">
+                    <col class="col5" style="width: 17%;">
+                    <col class="col6" style="width: 15%;">
                 </colgroup>
 
                 <thead>
-                    <tr>
-                        <th colspan="6">Загальний прайс-лист аптеки "Здоров'я+"</th>
+                    <tr id="header_row_1" class="header-main" style="border-bottom: 2px solid white;" bgcolor="#025959">
+                        <th colspan="6">Загальний список наявності препаратів аптеки "Здоров'я+"</th>
                     </tr>
                     <tr>
-                        <th rowspan="2">Категорія</th>
-                        <th colspan="2">Група A</th>
-                        <th colspan="2">Група B</th>
+                        <th rowspan="2" class="category-header" style="vertical-align: middle;" title="Категорії товарів">Категорія</th>
+                        <th>Група A</th>
+                        <th>Група B</th>
                         <th>Група C</th>
+                        <th>Група D</th>
+                        <th>Група E</th>
                     </tr>
                     <tr>
                         <th>Підгрупа A1</th>
-                        <th>Підгрупа A2</th>
                         <th>Підгрупа B1</th>
-                        <th>Підгрупа B2</th>
                         <th>Підгрупа C1</th>
+                        <th>Підгрупа D1</th>
+                        <th>Підгрупа E1</th>
                     </tr>
                 </thead>
 
@@ -60,37 +66,38 @@
                     </tr>
                 </tfoot>
 
-                <tbody>
+                <tbody class="main-body" style="background-color: #fdfdfd;" valign="middle" lang="uk" dir="ltr" title="Основний вміст таблиці">
+
                     <tr>
-                        <td>Вітаміни</td>
-                        <td colspan="2">Вітамін C</td>
+                        <td colspan="2" style="font-weight: bold;" dir="ltr" align="left" width="32%">Вітаміни (група)</td>
+                        <td>Вітамін C</td>
                         <td>Аскорбінка</td>
                         <td>500 мг</td>
                         <td>В наявності</td>
                     </tr>
                     <tr>
-                        <td>Вітаміни</td>
-                        <td colspan="2">Вітамін D3</td>
+                        <td colspan="2">Вітаміни (група)</td>
+                        <td>Вітамін D3</td>
                         <td>Олідетрим</td>
                         <td>2000 МО</td>
                         <td>Закінчується</td>
                     </tr>
                     <tr>
-                        <td>Антибіотики</td>
-                        <td colspan="2">Амоксицилін</td>
+                        <td colspan="2">Антибіотики (група)</td>
+                        <td>Амоксицилін</td>
                         <td>Оспамокс</td>
                         <td>1000 мг</td>
                         <td>За рецептом</td>
                     </tr>
                     <tr>
-                        <td>Антибіотики</td>
-                        <td colspan="2">Азитроміцин</td>
+                        <td colspan="2">Антибіотики (група)</td>
+                        <td>Азитроміцин</td>
                         <td>Сумамед</td>
                         <td>500 мг</td>
                         <td>За рецептом</td>
                     </tr>
                     <tr>
-                        <th rowspan="4">Сиропи від кашлю</th>
+                        <td>Сиропи</td>
                         <td>Лазолван</td>
                         <td>Сироп</td>
                         <td>15 мг/5 мл</td>
@@ -98,6 +105,7 @@
                         <td>Є в наявності</td>
                     </tr>
                     <tr>
+                        <td>Сиропи</td>
                         <td>Амброксол</td>
                         <td>Сироп</td>
                         <td>30 мг/5 мл</td>
@@ -105,16 +113,18 @@
                         <td>Є в наявності</td>
                     </tr>
                     <tr>
+                        <td>Сиропи</td>
                         <td>Гербіон</td>
-                        <td>Сироп</td>
-                        <td>Плющ</td>
+                        <td>Сироп плюща</td>
+                        <td>150 мл</td>
                         <td>150 мл</td>
                         <td>Немає</td>
                     </tr>
                     <tr>
+                        <td>Сиропи</td>
                         <td>Проспан</td>
-                        <td>Сироп</td>
-                        <td>Плющ</td>
+                        <td>Сироп плюща</td>
+                        <td>200 мл</td>
                         <td>200 мл</td>
                         <td>Є в наявності</td>
                     </tr>
