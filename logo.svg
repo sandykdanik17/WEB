@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <desc>Логотип аптеки Здоров'я+</desc>
+    <circle cx="50" cy="50" r="45" fill="#e9f5db" stroke="#038c73" stroke-width="5"/>
+    <text x="50" y="60" font-size="40" fill="#038c73" text-anchor="middle" font-weight="bold">+</text>
+</svg>
