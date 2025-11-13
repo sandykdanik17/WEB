@@ -857,3 +857,27 @@ meter {
     speak: normal;
     speak-punctuation: none;
 }
+
+
+/* Lab 6: SVG Styles */
+
+.svg-canvas {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin: 10px auto;
+    display: block;
+}
+
+section h3 {
+    margin-top: 15px;
+    color: var(--primary-hover);
+}
+
+section iframe,
+section embed,
+section object {
+    border: 1px dashed var(--border-color);
+}
