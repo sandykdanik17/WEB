@@ -881,3 +881,58 @@ section embed,
 section object {
     border: 1px dashed var(--border-color);
 }
+
+
+/*Lab 7: JavaScript */
+
+#interactive-header {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: none;
+    text-align: center;
+}
+
+fieldset {
+    margin-top: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+fieldset button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+fieldset button:hover {
+    background-color: var(--primary-hover);
+}
+
+fieldset textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+fieldset textarea[readonly] {
+    background-color: var(--hover-color);
+    cursor: default;
+}
