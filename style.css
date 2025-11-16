@@ -616,3 +616,244 @@ ul.image-marker li:last-child {
     padding: 10px 10px 10px 15px;
     border-radius: 0 8px 8px 0;
 }
+
+
+/* Зміни для лабараторної 4 */
+
+.lab4-table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.lab4-table caption {
+    display: table-caption;
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.lab4-table .col-name {
+    background-color: var(--hover-color);
+    width: 25%;
+}
+
+.lab4-table .col-price {
+    background-color: #f0fff0;
+}
+
+.lab4-table thead {
+    display: table-header-group;
+}
+
+.lab4-table tbody {
+    display: table-row-group;
+}
+
+.lab4-table tfoot {
+    display: table-footer-group;
+}
+
+.lab4-table colgroup {
+    display: table-column-group;
+}
+
+.lab4-table col {
+    display: table-column;
+}
+
+.lab4-table tr {
+    display: table-row;
+}
+
+.lab4-table th,
+.lab4-table td {
+    display: table-cell;
+}
+
+.lab4-table th,
+.lab4-table td {
+    /* ВИМОГА: border-* - задаємо стиль рамки */
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.lab4-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    speak-header: always;
+}
+
+.lab4-table tbody tr:nth-child(even) {
+    background-color: var(--hover-color);
+}
+
+.lab4-table tbody tr:hover {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+.lab4-table {
+    empty-cells: show;
+}
+
+
+/* Зміни для лабараторної 5*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px dashed var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-family: Impact, sans-serif;
+    font-weight: 900;
+    color: var(--primary-hover);
+    font-variant: small-caps;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-family: Cambria, serif;
+    font-weight: 800;
+}
+
+label.radio-label {
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="month"],
+input[type="color"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-style: normal;
+}
+
+
+/* Стилі для валідації */
+
+input:required:invalid {
+    border-color: var(--error-color);
+    box-shadow: 0 0 5px rgba(201, 0, 0, 0.2);
+}
+
+textarea:read-only {
+    background-color: var(--hover-color);
+    cursor: not-allowed;
+}
+
+
+/* Стилі для кнопок */
+
+input[type="submit"],
+input[type="button"],
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button {
+    background-color: var(--accent-coral);
+    color: white;
+}
+
+
+/* Стилі для progress та meter */
+
+progress,
+meter {
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+}
+
+.demonstration-styles-lab5 {
+    font-family: monospace;
+    font-family: Tahoma;
+    font-family: Impact;
+    font-family: Cambria;
+    font-family: Cochin;
+    font-weight: 800;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-size: 18px;
+    font: message-box;
+    font-style: normal;
+    font-stretch: condensed;
+    font-stretch: ultra-condensed;
+    font-stretch: semi-expanded;
+    /*  Текст  */
+    text-shadow: 2px 2px 5px red;
+    text-indent: 5%;
+    text-align: right;
+    white-space: pre;
+    letter-spacing: 1px;
+    /* Пристрої (для друку) */
+    @media print {
+        size: landscape;
+        marks: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+        orphans: 3;
+        widows: 3;
+    }
+    /* Звук */
+    volume: medium;
+    volume: loud;
+    play-during: url("sound.mp3") mix repeat;
+    pause-before: 20ms;
+    cue: cue-before cue-after;
+    cue-before: url("beep.mp3");
+    azimuth: center-right;
+    azimuth: right-side;
+    elevation: above;
+    speech-rate: x-slow;
+    speech-rate: faster;
+    stress: 50;
+    pitch-range: 60;
+    voice-family: "male",
+    preserve;
+    speak: normal;
+    speak-punctuation: none;
+}

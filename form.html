@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма введення - Аптека «Здоров’я+»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Форма введення інформації про товари</h1>
+            <nav>
+                <a href="menu.html">Головне меню</a>
+                <a href="author.html">Про автора</a>
+                <a href="news.html">Новини</a>
+                <a href="pharmacy.html">Про фірму</a>
+                <a href="lists.html">Асортимент</a>
+                <a href="table.html">Наявність товарів</a>
+                <a href="form.html" class="active">Форма</a>
+            </nav>
+        </header>
+
+        <main>
+            <form action="#" method="get" name="product_form" id="main_form" novalidate accept="image/*">
+
+                <fieldset lang="uk" style="border-style: dashed;" title="Основна інформація про товар">
+                    <legend title="Легенда" lang="uk" style="font-weight: bold;">Основна інформація</legend>
+
+                    <label for="product_name" id="label_name" class="form-label">Назва товару:</label>
+                    <input type="text" id="product_name" name="product_name" required maxlength="100" autocomplete="off">
+
+                    <label for="product_url">Посилання на товар (URL):</label>
+                    <input type="url" id="product_url" name="product_url" placeholder="http://example.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Категоризація та опис</legend>
+
+                    <label for="category_select">Категорія:</label>
+                    <select id="category_select" name="category">
+                        <optgroup label="Ліки">
+                            <option value="painkiller" dir="ltr" label="Знеболюючі" selected>Знеболюючі</option>
+                            <option value="vitamins" disabled>Вітаміни (недоступні)</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="description">Опис товару (мін. 10 символів):</label>
+                    <textarea id="description" class="description-area" name="description" placeholder="Опишіть товар..." required minlength="10" readonly dirname="desc.dir">Тимчасово тільки для читання</textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Додаткові параметри</legend>
+
+                    <label for="quantity">Кількість (макс. 99):</label>
+                    <input type="number" id="quantity" name="quantity" max="99">
+
+                    <label>Наявність:</label>
+                    <input type="radio" id="in_stock" name="stock" value="1" checked>
+                    <label for="in_stock" class="radio-label">В наявності</label>
+
+                    <input type="radio" id="out_stock" name="stock" value="0">
+                    <label for="out_stock" class="radio-label">Очікується</label>
+
+                    <label for="exp_month">Місяць виготовлення:</label>
+                    <input type="month" id="exp_month" name="exp_month">
+
+                    <label for="arrival_time">Точний час прибуття:</label>
+                    <input type="datetime-local" id="arrival_time" name="arrival_time">
+
+                    <label for="legacy_time">Дата:</label>
+                    <input type="datetime" id="legacy_time" name="legacy_time">
+
+                    <label for="brand_color">Колір бренду:</label>
+                    <input type="color" id="brand_color" name="brand_color" value="#038c73">
+                </fieldset>
+
+                <details lang="uk" class="details-block" open>
+                    <summary>Додаткові елементи</summary>
+
+                    <label for="storage_full">Заповненість складу:</label>
+                    <progress id="storage_full" max="100" value="70" dir="ltr"> 70% </progress>
+
+                    <label for="product_key">Згенерувати ключ товару:</label>
+                    <keygen name="product_key" title="Security Key" disabled challenge="key_challenge">
+                </details>
+
+                <hr>
+
+                <input type="submit" value="Відправити інформацію" formnovalidate>
+
+                <output name="form_output" class="output-area" lang="uk" form="main_form"></output>
+
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
