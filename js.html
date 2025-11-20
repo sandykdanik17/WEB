@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Аптека «Здоров’я+»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="alert('Сторінка повністю завантажена!');" onresize="console.log('Розмір вікна змінено!')">
+    <div class="container">
+        <header>
+            <h1>Динамічні елементи</h1>
+            <nav>
+                <a href="menu.html">Головне меню</a>
+                <a href="author.html">Про автора</a>
+                <a href="news.html">Новини</a>
+                <a href="pharmacy.html">Про фірму</a>
+                <a href="lists.html">Асортимент</a>
+                <a href="table.html">Наявність товарів</a>
+                <a href="form.html">Форма</a>
+                <a href="svg.html">SVG Графіка</a>
+                <a href="js.html" class="active">JavaScript</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2 id="interactive-header" onclick="this.style.color='var(--accent-coral)';" onmouseover="this.style.backgroundColor='var(--hover-color)';" onmouseout="this.style.backgroundColor='transparent';">
+                Інтерактивний заголовок
+            </h2>
+
+
+            <fieldset>
+                <legend>Аналіз документа</legend>
+                <p>Натисніть кнопку, щоб дізнатися кількість форм на цій сторінці.</p>
+                <button id="task3Btn">Нажми</button>
+                <textarea id="task3Result" rows="2" readonly></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Інтерактивний малюнок</legend>
+                <img src="img/author-photo (1).jpg" alt="Інтерактивний малюнок" id="interactive-image" style="border: 3px solid transparent; transition: all 0.3s; cursor: pointer;">
+            </fieldset>
+
+            <fieldset>
+                <legend>Пошук слів</legend>
+                <p>Введіть текст для пошуку слів, що починаються на "е" і закінчуються на "а":</p>
+                <textarea id="task5Input" rows="4">енеїда була на паромі, стара поема на пергаменті.</textarea>
+                <button id="task5Btn">Пошук слів</button>
+                <textarea id="task5Result" rows="3" readonly></textarea>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Обробка масиву</legend>
+                <p>Пошук максимального серед від'ємних елементів у масиві [10, -2, -15, 4, -8, 0].</p>
+                <button id="task6Btn">Старт</button>
+                <textarea id="task6Result" rows="3" readonly></textarea>
+            </fieldset>
+
+            <form id="dummy_form_1" style="display: none;"></form>
+            <form id="dummy_form_2" style="display: none;"></form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
