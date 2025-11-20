@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медіатека - Аптека «Здоров’я+»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Бібліотека медіа-ресурсів</h1>
+            <nav>
+                <a href="menu.html">Головне меню</a>
+                <a href="author.html">Про автора</a>
+                <a href="news.html">Новини</a>
+                <a href="pharmacy.html">Про фірму</a>
+                <a href="lists.html">Асортимент</a>
+                <a href="table.html">Прайс-лист</a>
+                <a href="form.html">Форма</a>
+                <a href="svg.html">SVG Графіка</a>
+                <a href="js.html">JavaScript</a>
+                <a href="canvas.html">Canvas</a>
+                <a href="media.html" class="active">Медіа</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="media-filter">
+                <h2>Пошук медіа</h2>
+                <form action="#" method="get" class="filter-form">
+                    <fieldset>
+                        <legend>Фільтр</legend>
+                        <label for="media_type">Тип контенту:</label>
+                        <select id="media_type" name="type">
+                            <option value="all">Всі</option>
+                            <option value="video">Відео</option>
+                            <option value="audio">Аудіо</option>
+                        </select>
+
+                        <label for="search_query">Пошук:</label>
+                        <input type="search" id="search_query" name="q" placeholder="Назва файлу...">
+
+                        <input type="submit" value="Знайти">
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="media-gallery">
+                <h2>Відео-матеріали</h2>
+
+                <figure class="media-item">
+                    <video controls width="100%" poster="https://via.placeholder.com/600x340/038c73/ffffff?text=Video+Preview">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                        Ваш браузер не підтримує тег video.
+                    </video>
+                    <figcaption>Промо-ролик: "Великий Бак" (Приклад MP4)</figcaption>
+                </figure>
+
+                <figure class="media-item">
+                    <div class="video-container">
+                        <div class="video-container">
+                            <div class="video-container">
+                                <iframe src="https://player.vimeo.com/video/76979871" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>Корисне відео про здоров'я (Vimeo)</figcaption>
+                </figure>
+            </section>
+
+            <section class="media-gallery">
+                <h2>Аудіо-архів</h2>
+
+                <figure class="media-item audio-card">
+                    <figcaption>Музика для релаксації (MP3)</figcaption>
+                    <audio controls>
+                        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                        Ваш браузер не підтримує тег audio.
+                    </audio>
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Аптека «Здоров’я+»</p>
+        </footer>
+    </div>
+</body>
+
+</html>
