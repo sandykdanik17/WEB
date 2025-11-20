@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Сандюк Даниїл, варіант 17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Графіка - Аптека «Здоров’я+»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="draw();">
+    <div class="container">
+        <header>
+            <h1>Растрова графіка</h1>
+            <nav>
+                <a href="author.html">Про автора</a>
+                <a href="news.html">Новини</a>
+                <a href="pharmacy.html">Про фірму</a>
+                <a href="lists.html">Асортимент</a>
+                <a href="menu.html">Головне меню</a>
+                <a href="table.html">Прайс-лист</a>
+                <a href="form.html">Форма</a>
+                <a href="svg.html">SVG Графіка</a>
+                <a href="js.html">JavaScript</a>
+                <a href="canvas.html" class="active">Canvas</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Малювання на полотні</h2>
+                <p>Натисніть на полотно, щоб запустити/зупинити анімацію фігур.</p>
+
+                <canvas id="myCanvas" width="600" height="400" style="border:1px solid #d3d3d3; background-color: #f8f9fa; cursor: pointer;">
+                    Ваш браузер не підтримує тег HTML5 canvas.
+                </canvas>
+
+                <div style="margin-top: 10px;">
+                    <button onclick="resetAnimation()" style="padding: 10px; background-color: var(--accent-coral); color: white; border: none; border-radius: 5px; cursor: pointer;">Скинути анімацію</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Аптека «Здоров’я+»</p>
+        </footer>
+    </div>
+
+    <script src="canvas_script.js"></script>
+</body>
+
+</html>
