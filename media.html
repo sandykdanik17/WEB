@@ -14,11 +14,11 @@
         <header>
             <h1>Бібліотека медіа-ресурсів</h1>
             <nav>
-                <a href="menu.html">Головне меню</a>
                 <a href="author.html">Про автора</a>
                 <a href="news.html">Новини</a>
                 <a href="pharmacy.html">Про фірму</a>
                 <a href="lists.html">Асортимент</a>
+                <a href="menu.html">Головне меню</a>
                 <a href="table.html">Прайс-лист</a>
                 <a href="form.html">Форма</a>
                 <a href="svg.html">SVG Графіка</a>
@@ -29,61 +29,57 @@
         </header>
 
         <main>
-            <section class="media-filter">
-                <h2>Пошук медіа</h2>
-                <form action="#" method="get" class="filter-form">
-                    <fieldset>
-                        <legend>Фільтр</legend>
-                        <label for="media_type">Тип контенту:</label>
-                        <select id="media_type" name="type">
-                            <option value="all">Всі</option>
-                            <option value="video">Відео</option>
-                            <option value="audio">Аудіо</option>
-                        </select>
+            <section class="media-section">
+                <h2>Аудіо-супровід</h2>
+                <p>Виберіть мелодію для релаксації або звуки природи.</p>
 
-                        <label for="search_query">Пошук:</label>
-                        <input type="search" id="search_query" name="q" placeholder="Назва файлу...">
-
-                        <input type="submit" value="Знайти">
-                    </fieldset>
+                <form class="media-form">
+                    <label for="audioSelect">Вибрати трек:</label>
+                    <select id="audioSelect" onchange="changeAudio()">
+                        <option value="https://www.w3schools.com/html/horse.mp3">Звуки тварин</option>
+                        <option value="https://actions.google.com/sounds/v1/weather/rain_heavy_loud.ogg">Звуки дощу</option>
+                        <option value="https://actions.google.com/sounds/v1/ambiences/coffee_shop.ogg">Атмосфера кафе</option>
+                    </select>
                 </form>
-            </section>
-
-            <section class="media-gallery">
-                <h2>Відео-матеріали</h2>
-
-                <figure class="media-item">
-                    <video controls width="100%" poster="https://via.placeholder.com/600x340/038c73/ffffff?text=Video+Preview">
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-                        Ваш браузер не підтримує тег video.
-                    </video>
-                    <figcaption>Промо-ролик: "Великий Бак" (Приклад MP4)</figcaption>
-                </figure>
-
-                <figure class="media-item">
-                    <div class="video-container">
-                        <div class="video-container">
-                            <div class="video-container">
-                                <iframe src="https://player.vimeo.com/video/76979871" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>Корисне відео про здоров'я (Vimeo)</figcaption>
-                </figure>
-            </section>
-
-            <section class="media-gallery">
-                <h2>Аудіо-архів</h2>
 
                 <figure class="media-item audio-card">
-                    <figcaption>Музика для релаксації (MP3)</figcaption>
-                    <audio controls>
+                    <audio id="myAudioPlayer" controls>
                         <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-                        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
-                        Ваш браузер не підтримує тег audio.
+                        Ваш браузер не підтримує елемент audio.
                     </audio>
+                    <figcaption>Зараз грає: <span id="audioCaption">Звуки тварин (Кінь)</span></figcaption>
                 </figure>
+            </section>
+
+            <section class="media-section">
+                <h2>Відео-матеріали</h2>
+                <p>Оберіть відеоролик для перегляду.</p>
+
+                <form class="media-form">
+                    <label for="videoSelect">Вибрати відео:</label>
+                    <select id="videoSelect" onchange="changeVideo()">
+                        <option value="https://www.w3schools.com/html/mov_bbb.mp4">Мультфільм "Великий Бак"</option>
+                        <option value="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">Квітка розквітає</option>
+                        <option value="https://www.w3schools.com/html/movie.mp4">Ведмідь біля річки</option>
+                    </select>
+                </form>
+
+                <figure class="media-item">
+                    <video id="myVideoPlayer" width="100%" height="auto" controls poster="https://via.placeholder.com/600x340/038c73/ffffff?text=Video+Player">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Ваш браузер не підтримує елемент video.
+                    </video>
+                    <figcaption>Перегляд: <span id="videoCaption">Мультфільм "Великий Бак"</span></figcaption>
+                </figure>
+            </section>
+
+            <section class="media-section">
+                <h2>Відео з Vimeo</h2>
+
+                <div class="video-container">
+                    <iframe src="https://player.vimeo.com/video/76979871" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
             </section>
         </main>
 
@@ -91,6 +87,8 @@
             <p>© 2025 Аптека «Здоров’я+»</p>
         </footer>
     </div>
+
+    <script src="media.js"></script>
 </body>
 
 </html>

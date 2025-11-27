@@ -1,12 +1,9 @@
-// Кількість форм на сторінці
-
 document.getElementById('task3Btn').addEventListener('click', function() {
     const formCount = document.forms.length;
     const resultArea = document.getElementById('task3Result');
     resultArea.value = `Кількість форм на цій сторінці: ${formCount}.`;
 });
 
-// Обробка подій для малюнків
 const image = document.getElementById('interactive-image');
 image.addEventListener('mouseover', function() {
     this.style.borderColor = 'var(--accent-coral)';
@@ -42,14 +39,11 @@ document.getElementById('task5Btn').addEventListener('click', function() {
     const resultArea = document.getElementById('task5Result');
 
     if (foundWords) {
-        // .join(', ') робить гарний список через кому
         resultArea.value = `Знайдені слова: ${foundWords.join(', ')}. \nКількість: ${foundWords.length}.`;
     } else {
         resultArea.value = 'Слова не знайдено.';
     }
 });
-
-// Робота з масивами 
 
 document.getElementById('task6Btn').addEventListener('click', function() {
     const arrayA = [10, -2, -15, 4, -8, 0];
